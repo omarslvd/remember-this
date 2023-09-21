@@ -16,7 +16,7 @@ const routes: Record<string, any> = {
 
 export const handleLocation = (): void => {
   const path = window.location.pathname;
-  const route = routes[path] != null ? routes[path] : routes[404];
+  const route = routes[path] ?? routes[404];
   const appEl = document.getElementById("app");
 
   if (appEl != null) {
